@@ -8,6 +8,30 @@
   "bin": {
     "remotion-deck": "bin/cli.mjs"
   },
+  "files": [
+    "bin/",
+    "src/",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "remotion",
+    "pptx",
+    "powerpoint",
+    "gif",
+    "slides",
+    "presentation",
+    "cli",
+    "ffmpeg"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StefVuck/Remotion-To-PPTX.git"
+  },
+  "bugs": {
+    "url": "https://github.com/StefVuck/Remotion-To-PPTX/issues"
+  },
+  "homepage": "https://github.com/StefVuck/Remotion-To-PPTX#readme",
   "scripts": {
     "start": "node bin/cli.mjs"
   },
