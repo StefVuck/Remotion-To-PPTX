@@ -1,5 +1,8 @@
 # remotion-deck
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![Node](https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg)](https://nodejs.org)
+
 Convert any [Remotion](https://www.remotion.dev/) project to PowerPoint: render
 each composition to an animated GIF and assemble a blank deck, one GIF per slide.
 Zero config — it discovers your compositions automatically.
@@ -115,3 +118,7 @@ remotion-deck -p ./my-remotion-app -m scenes.json -o deck.pptx
 
 To add a new output format, write a sibling to `pptx.mjs` and branch in
 `build.mjs`. To change GIF quality, adjust the ffmpeg filters in `gif.mjs`.
+
+## License
+
+[MIT](LICENSE) © Stefan Vuckovic
