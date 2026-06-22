@@ -33,7 +33,9 @@
   },
   "homepage": "https://github.com/StefVuck/Remotion-To-PPTX#readme",
   "scripts": {
-    "start": "node bin/cli.mjs"
+    "start": "node bin/cli.mjs",
+    "check": "node scripts/check.mjs",
+    "prepublishOnly": "node scripts/check.mjs"
   },
   "engines": {
     "node": ">=18"

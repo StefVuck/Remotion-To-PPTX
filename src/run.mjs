@@ -1,6 +1,7 @@
 import path from "node:path";
 import { planScenes } from "./plan.mjs";
 import { build } from "./build.mjs";
+import { ensureFfmpeg } from "./preflight.mjs";
 
 /**
  * Shared entry point for both the flag-driven CLI and the interactive menu.
@@ -20,6 +21,8 @@ import { build } from "./build.mjs";
  * @returns {Promise<{ out: string, gifs: string[] }>}
  */
 export async function run(opts) {
+  await ensureFfmpeg();
+
   const projectDir = path.resolve(opts.project);
   const entry = opts.entry ?? "src/index.ts";
 
