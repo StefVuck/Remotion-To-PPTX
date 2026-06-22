@@ -41,7 +41,7 @@ export async function run(opts) {
     scenes,
     gif: { fps: opts.fps ?? 15, width: opts.width ?? 1280 },
     out: path.resolve(opts.out ?? "deck.pptx"),
-    workDir: path.resolve(opts.workDir ?? ".remotion-deck-build"),
+    workDir: path.resolve(opts.workDir ?? ".remotion-to-pptx-build"),
     log: (m) => console.log(`· ${m}`),
   });
 

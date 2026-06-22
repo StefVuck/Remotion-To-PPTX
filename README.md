@@ -1,4 +1,4 @@
-# remotion-deck
+# remotion-to-pptx
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![Node](https://img.shields.io/badge/node-%3E%3D18-brightgreen.svg)](https://nodejs.org)
@@ -27,7 +27,7 @@ composition → remotion render --sequence → PNGs → ffmpeg palette → GIF �
 
 ```bash
 npm install
-npm link        # optional: exposes the `remotion-deck` command globally
+npm link        # optional: exposes the `remotion-to-pptx` command globally
 ```
 
 ## Usage
@@ -39,7 +39,7 @@ your compositions, lets you pick which to include, and prompts for output
 settings:
 
 ```bash
-remotion-deck
+remotion-to-pptx
 ```
 
 ### Flags
@@ -47,7 +47,7 @@ remotion-deck
 Point it at a Remotion project. Every registered composition becomes one slide:
 
 ```bash
-remotion-deck --project ./my-remotion-app --out deck.pptx
+remotion-to-pptx --project ./my-remotion-app --out deck.pptx
 # or without npm link:
 node bin/cli.mjs --project ./my-remotion-app --out deck.pptx
 ```
@@ -55,14 +55,14 @@ node bin/cli.mjs --project ./my-remotion-app --out deck.pptx
 Pick or drop specific compositions:
 
 ```bash
-remotion-deck -p ./my-remotion-app --only Intro,Demo,Outro
-remotion-deck -p ./my-remotion-app --exclude Scratch
+remotion-to-pptx -p ./my-remotion-app --only Intro,Demo,Outro
+remotion-to-pptx -p ./my-remotion-app --exclude Scratch
 ```
 
 Tune the GIFs:
 
 ```bash
-remotion-deck -p ./my-remotion-app --fps 20 --width 1600
+remotion-to-pptx -p ./my-remotion-app --fps 20 --width 1600
 ```
 
 ## Options
@@ -72,7 +72,7 @@ remotion-deck -p ./my-remotion-app --fps 20 --width 1600
 | `-p, --project <dir>` | — (required) | Remotion project root |
 | `-e, --entry <file>` | `src/index.ts` | Remotion entry file, relative to project |
 | `-o, --out <file>` | `deck.pptx` | output PowerPoint |
-| `-w, --work-dir <dir>` | `.remotion-deck-build` | scratch dir for frames + gifs |
+| `-w, --work-dir <dir>` | `.remotion-to-pptx-build` | scratch dir for frames + gifs |
 | `--only <ids>` | — | comma-separated composition ids to include |
 | `--exclude <ids>` | — | comma-separated composition ids to exclude |
 | `-m, --manifest <file>` | — | advanced: slice composition(s) into scenes by frame range |
@@ -99,7 +99,7 @@ can be set per scene or once at the top.
 ```
 
 ```bash
-remotion-deck -p ./my-remotion-app -m scenes.json -o deck.pptx
+remotion-to-pptx -p ./my-remotion-app -m scenes.json -o deck.pptx
 ```
 
 ## How it's structured (to extend)

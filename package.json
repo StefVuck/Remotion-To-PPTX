@@ -1,12 +1,12 @@
 {
-  "name": "remotion-deck",
+  "name": "remotion-to-pptx",
   "version": "0.1.0",
   "description": "Turn a Remotion project's scenes into per-scene GIFs and assemble them into a PowerPoint, one animated GIF per slide.",
   "license": "MIT",
   "author": "Stefan Vuckovic",
   "type": "module",
   "bin": {
-    "remotion-deck": "bin/cli.mjs"
+    "remotion-to-pptx": "bin/cli.mjs"
   },
   "files": [
     "bin/",

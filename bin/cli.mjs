@@ -23,14 +23,14 @@ if (process.argv.length <= 2 && process.stdin.isTTY) {
 const program = new Command();
 
 program
-  .name("remotion-deck")
+  .name("remotion-to-pptx")
   .description(
     "Convert a Remotion project to PowerPoint: render each composition to an animated GIF and assemble a blank deck, one GIF per slide. Run with no arguments for an interactive menu.",
   )
   .requiredOption("-p, --project <dir>", "path to the Remotion project root")
   .option("-e, --entry <file>", "Remotion entry file, relative to project", "src/index.ts")
   .option("-o, --out <file>", "output .pptx path", "deck.pptx")
-  .option("-w, --work-dir <dir>", "scratch directory for frames/gifs", ".remotion-deck-build")
+  .option("-w, --work-dir <dir>", "scratch directory for frames/gifs", ".remotion-to-pptx-build")
   .option("--only <ids>", "comma-separated composition ids to include", list)
   .option("--exclude <ids>", "comma-separated composition ids to exclude", list)
   .option("-m, --manifest <file>", "advanced: slice composition(s) into scenes by frame range")

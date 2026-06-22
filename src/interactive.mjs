@@ -9,7 +9,7 @@ import { listCompositions } from "./compositions.mjs";
  * @returns {Promise<object|null>} options for `run()`, or null if cancelled
  */
 export async function promptOptions() {
-  console.log("remotion-deck — interactive setup\n");
+  console.log("remotion-to-pptx — interactive setup\n");
 
   const project = await input({
     message: "Remotion project directory:",
