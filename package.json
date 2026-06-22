@@ -1,0 +1,20 @@
+{
+  "name": "remotion-deck",
+  "version": "0.1.0",
+  "description": "Turn a Remotion project's scenes into per-scene GIFs and assemble them into a PowerPoint, one animated GIF per slide.",
+  "type": "module",
+  "bin": {
+    "remotion-deck": "bin/cli.mjs"
+  },
+  "scripts": {
+    "start": "node bin/cli.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@inquirer/prompts": "^8.5.2",
+    "commander": "^12.1.0",
+    "pptxgenjs": "^3.12.0"
+  }
+}
